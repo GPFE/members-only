@@ -1,0 +1,9 @@
+<% @posts.each do |post| %>
+<%= post.title %>
+<%= post.content %>
+<%=
+if current_user
+    post.user.email
+end
+%>
+<% end %>
